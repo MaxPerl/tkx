@@ -3,7 +3,7 @@ use lib ('/home/maximilian/Downloads/Tkx-1.09/blib/lib');
 use strict;
 use Test qw(plan ok);
 
-plan tests => 17;
+plan tests => 18;
 
 use Tkx qw(expr list lindex error);
 
