@@ -1,9 +1,9 @@
 #!perl -w
-
+use lib ('/home/maximilian/Downloads/Tkx-1.09/blib/lib');
 use strict;
 use Test qw(plan ok);
 
-plan tests => 18;
+plan tests => 17;
 
 use Tkx qw(expr list lindex error);
 
@@ -36,6 +36,6 @@ eval { @list = Tkx::SplitList("a {") };
 ok($@ && $@ =~ /valid Tcl list/);
 
 eval { error("Foo") };
-ok($@, "Foo at @{[__FILE__]} line @{[__LINE__ - 1]}.\n");
+ok($@ && $@ =~ /^Tcl error 'Foo at/);
 
 sub j { join(":", @_) }
