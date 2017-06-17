@@ -1,5 +1,4 @@
 #!perl -w
-use lib ('/home/maximilian/Downloads/Tkx-1.09/blib/lib');
 use strict;
 use Test qw(plan ok);
 
